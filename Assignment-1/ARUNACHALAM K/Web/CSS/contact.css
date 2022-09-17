@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(205, 205, 205);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+.blue-box{
+    position: relative;
+
+    background-color: #9cb4f7;
+    width: 75%;
+    height: 60%;
+    color: aliceblue;
+    
+}
+.text{
+    margin: 2rem 0 0 2rem;
+}
+.blue-box .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.blue-box i {
+    margin: 1rem;
+}
+.blue-box .detail {
+    margin: 0 0 0 1rem;
+}
+.contact-box{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(239, 255, 244);
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    right: 0;
+    top: 0;
+    margin: -4rem 8rem;
+    box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.495);
+    border-radius: 1rem;
+}
+.contact-box .title {
+    margin: 2.8rem 0 0 2rem;
+    color: #002c1c;
+
+}
+.contact-box .inputs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem 2rem;
+}
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+    padding: 1rem;
+    border-color: rgb(44, 44, 44);
+    margin: .9rem 0;
+  }
+
+#submit-btn{
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 1rem 1rem;
+    font-size: 16px;
+    margin: 2rem 0 0 0;
+    cursor: pointer;
+}
+#submit-btn:hover{
+    background-color:#04AA6D ;
+    color: aliceblue;
+    border: none;
+}
