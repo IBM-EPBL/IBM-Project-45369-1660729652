@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(230, 230, 230);
+}
+.title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 1.6rem 0 1.6rem 0;
+}
+.social-icons a i{
+    color: rgb(69, 69, 69);
+    margin-left: 1rem;
+}
+.upper-box {
+    position: relative;
+    background-color: rgb(0, 140, 255) ;
+    width: 70%;
+    height: 11rem;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 5px 0px 8px rgba(47, 48, 48, 0.292);
+
+}
+.upper-box .profile-box img{
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+    width: 10rem;
+    border: 8px solid aliceblue;
+}
+.upper-box .detail-box {
+    position: absolute;
+    top: 3rem;
+    left: 20rem;
+    color: aliceblue;   
+}
+.upper-box .detail-box .name {
+    font-weight: bold;
+    font-size: 2rem;
+}
+.upper-box .detail-box .para{
+    margin: .5rem 0 1rem 0;
+}
+.buttons button{
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+.buttons .download-btn{
+    background-color: aliceblue;
+    color: rgb(70, 70, 70);
+}
+.buttons .hire-btn{
+    background-color: rgb(0, 106, 78);
+    color: aliceblue;
+}
+.buttons .hire-btn a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.buttons .download-btn:hover{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.buttons .hire-btn:hover{
+    background-color: rgb(0, 128, 86);
+    cursor: pointer;
+}
+.lower-box {
+    background-color: white;
+    width: 70%;
+    display: flex;
+    padding: 0 0 2rem 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 3px 8px 8px rgba(47, 48, 48, 0.292);
+
+}
+.lower-box .left-container{
+    width: 50%;
+    margin: 2rem 0 0 2rem;
+}
+.left-container .title{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.left-container .paragraph {
+    line-height: 1.5;
+}
+.right-container {
+    margin: 2rem 0 0 2rem;
+}
+.right-container table {
+    margin: 1rem;
+    line-height: 2;
+    column-gap: 50rem;
+}
+.right-container table td {
+    padding: 0 2rem 0 0;
+}
+.skill-bars{
+    margin: 4rem 0 0 0 ;
+}
+/* Container for skill bars */
+.container {
+    width: 100%; 
+    background-color: #ddd; 
+  }
+  
+  .skills {
+    height: 1rem;
+    color: white; 
+    margin: .5rem 0;
+  }
+  
+  .html {width: 90%; background-color: #04AA6D;} 
+  .css {width: 80%; background-color: #2196F3;} 
+  .javascript {width: 65%; background-color: #04AA6D;} 
+  .adobe{width: 75%; background-color: #2196F3;} 
+  .photoshop {width: 90%; background-color: #04AA6D;} 
+  .sketch {width: 70%; background-color: #2196F3;} 
