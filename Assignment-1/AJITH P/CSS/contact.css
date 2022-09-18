@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(205, 205, 205);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+.contactus-box{
+    position:absolute;
+    width: 73%;
+    height: 50%;
+    background-color: rgb(239, 255, 244);
+    color: black;
+    font-family:'Courier New', Courier, monospace Arial, sans-serif;
+    
+    margin: -2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -200px;
+    margin-bottom: 250px;
+    border-radius: 1rem;
+   
+}
+.text{
+    margin: 2rem 0 0 2rem;
+}
+.contactus-box .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.contactus-box i {
+    margin: 1rem;
+}
+.contactus-box .detail {
+    margin: 0 0 0 1rem;
+}
+.contact-box{
+    position: relative;
+    width: 420px;
+    height: 420px;
+    margin-bottom: -300px;
+    background-color: rgb(239, 255, 244);
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    right: 0;
+    top: 0;
+    margin: -2rem 4rem;
+    margin-top: 200px;
+    margin-right: 150px;
+    box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.495);
+    border-radius: 1rem;
+}
+.contact-box .title {
+    margin: 2.8rem 0 0 2rem;
+    color: #002c1c;
+
+}
+.contact-box .inputs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem 2rem;
+}
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+    padding: 1rem;
+    border-color: rgb(44, 44, 44);
+    margin: .9rem 0;
+  }
+
+#submit-btn{
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 1rem 1rem;
+    font-size: 16px;
+    margin: 2rem 0 0 0;
+    cursor: pointer;
+}
+#submit-btn:hover{
+    background-color:#04AA6D ;
+    color: aliceblue;
+    border: none;
+}
