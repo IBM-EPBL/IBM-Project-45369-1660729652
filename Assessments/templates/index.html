@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flask</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+
+<body >
+    <!-- NavBar -->
+    <nav>
+        <div class="logo">
+            <h4>Fla-_- -_- Sk</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('joinus') }}"> To join</a></li>
+        </ul>
+        
+    
+    </nav>
+    <div class="dev-box">
+        <img src="/static/images/loading-load.gif" alt="" srcset="">
+    </div>
+    
+
+    <!-- Scripts -->
+    <script src="/static/JS/navbar.js"></script>
+</body>
+
+</html>
