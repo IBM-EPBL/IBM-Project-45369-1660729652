@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signin.css')}}">
+</head>
+<body>
+    
+        <form action="/signin" method="post">
+             <h1>SIGNIN</h1>
+            <input type="text" name="email" placeholder="USERNAME" id="email">
+            <input type="password" name="password" placeholder="PASSWORD" id="password">
+           <button><a href="{{ url_for('home')}}">login</a> </button>
+            <a href="{{ url_for('register')}}">register</a>
+            <a href="#">forget password?</a>
+            
+        </form>
+    
+</body>
+</html>

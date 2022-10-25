@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+form{
+    width: 35rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid smokewhite;
+    box-shadow: 0 8px 32px 0 rgba(167, 142, 142, 0.952);
+    border-left: 2px solid smokewhite;
+    border-radius: 1.5rem;
+}
+ h1{
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    letter-spacing: 3px;
+    margin-bottom: 5%;
+    
+}
+
+input{
+    width: 80%;
+    margin: 5% auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    outline: none;
+    
+    border-bottom: 1px solid seashell;
+    opacity: .8;
+}
+button{
+    width: 20%;
+    margin: 3% auto;
+    outline: none;
+    font-size: 20px;
+    opacity: .7;
+    background-color: rgba(red, green, blue, 0.06);
+    padding: 10px 15px;
+    border-bottom:2px solid seashell ;
+    border-right: 2px solid seashell;
+    
+}
+button a{
+    text-decoration: none;
+}
+a{
+    text-align: center;
+}

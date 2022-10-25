@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+}
+.nav{
+    width: 100%;
+    height: 50px;
+    background-color: whitesmoke;
+    
+}
+span{
+    font-size: 24px;
+    color:red;
+    padding-left: 20px;
+    line-height: 50px;
+    
+}
+.nav ul{
+     float:right; 
+     padding-right:20px; 
+     
+}
+.nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 50px;
+}
+.nav ul li a{
+    color: black;
+    padding: 15px 10px;
+}
+.nav ul li a:hover{
+    color: red;
+    border-bottom: 2px solid red;
+}
+.nav form{
+    float: right;
+    line-height: 50px;
+    
+}
+@media (max-width:768px){
+    .nav ul {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: aquamarine;
+        text-align: center;
+        padding: 0;
+        top: 50px;
+        left: -100%;
+        
+    }
+    .nav ul.slide{
+        left: 0;
+        transition: 2s;
+          
+    }
+    .nav ul li{
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .nav ul li a{
+        border: none;
+        color: black;
+        
+    }
+    .nav ul li:hover{
+        background-color:red ;
+
+    }
+    .nav ul li a:hover{
+        border: none;
+    }
+    .nav ul li:hover a{
+        color: aliceblue;
+    }
+
+    
+     .hamburger{
+         float: right;
+         padding-right: 20px ;
+         padding-top: 10px;
+     }
+     .hamburger .line{
+         width: 15px;
+         height: 5px;
+         background-color: rgb(240, 28, 28);
+         margin-bottom: 5px;
+         display: block;
+        
+     }
+}
