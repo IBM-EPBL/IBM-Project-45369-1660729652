@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
