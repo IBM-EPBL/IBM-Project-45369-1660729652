@@ -1,0 +1,292 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{%if messages%}
+    {%for mess in messages%}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+<strong>{{mess}}</strong>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+
+    {%endfor%}
+{%endif%}
+{% endwith %}
+
+     {% if session['logged_in'] == True %}
+
+     {%else%}
+
+     {%endif%}
+
+
+    <!--br>
+    <style>
+      .big{
+      top:70;
+      background-color:;
+      margin-top:80px;
+      margin-left:550px;
+      margin-right:550px;
+      border: 1px solid #000000;
+      height:200px;
+      border-radius: 1px;
+      
+      text-align:center;
+      }
+      .row{
+      
+      height:150px;
+      
+      }
+      .col{
+        margin:10px;
+        margin-left:50px;	
+        margin-right:50px;
+        border-radius: 1px;
+        border: 1px solid #000000;
+       
+        text-align:center;
+      }
+      .ext{
+      margin-top:25px;
+      line-height:40px;
+      }
+      .ext1{
+      margin-top:40px;
+      line-height:50px;
+      font-size:25px;
+      color:#f95450;
+      }
+      
+  </style>
+  
+<div class="container-fluid">
+ 
+    <br>
+    <div class="big">
+      <div class="box">
+      <div class="ext1"><font size="20px">{{b['1']}}</font><br><b>Donors</b></div>
+    </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col" >
+      <div class="ext">{{b['2']}}<br><b>O Positive</b></div>
+    </div>
+      <div class="col" >
+      <div class="ext">{{b['3']}}<br><b>A Positive</b></div>
+    </div>
+      <div class="col" >
+      <div class="ext">{{b['4']}}<br><b>B Positive</b></div>
+    </div>
+      <div class="col" >
+      <div class="ext">{{b['5']}}<br><b>AB Positive</b></div>
+    </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col" >
+      <div class="ext">{{b['6']}}<br><b>O Negative</b></div>
+    </div>
+      <div class="col" >
+      <div class="ext">{{b['7']}}<br><b>A Negative</b></div>
+    </div>
+      <div class="col" >
+      <div class="ext">{{b['8']}}<br><b>B Negative</b></div>
+    </div>
+      <div class="col" >
+      <div class="ext">{{b['9']}}<br><b>AB Negative</b></div>
+    </div>
+    </div>
+    <div style="height:200px"></div>
+  </div-->
+
+
+  <div class="card border-danger text-center">
+    <div class="card-header">Total Blood in Blood bank</div>
+    <div class="card-body text-danger">
+      <h5 class="card-title"><span class='numscroller' data-min='1' data-max='{{b['1']}}' data-delay='5' data-increment='10'>{{b['1']}}</span> Donors</h5>
+    </div>
+  </div>
+
+<br>
+
+
+
+      <div class="container">
+<div class="row">
+  <div class="col"><div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">A positive</div>
+  <div class="card-body">
+    <h5 class="card-title"><span class='numscroller' data-min='1' data-max='{{b['2']}}' data-delay='5' data-increment='10'>{{b['2']}}</span> pints</h5>
+
+  </div>
+</div></div>
+  <div class="col"><div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">A negative</div>
+  <div class="card-body">
+    <h5 class="card-title"><span class="count"><span class='numscroller' data-min='1' data-max='{{b['3']}}' data-delay='5' data-increment='10'>{{b['3']}}</span></span> pints</h5>
+
+  </div>
+  </div></div>
+  <div class="col"><div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+    <div class="card-header">B positive</div>
+  <div class="card-body">
+    <h5 class="card-title"><span class='numscroller' data-min='1' data-max='{{b['4']}}' data-delay='5' data-increment='10'>{{b['4']}}</span> pints</h5>
+
+  </div>
+  </div></div>
+  <div class="col"><div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+    <div class="card-header">B negative</div>
+  <div class="card-body">
+    <h5 class="card-title"><span class='numscroller' data-min='1' data-max='{{b['5']}}' data-delay='5' data-increment='10'>{{b['5']}}</span> pints</h5>
+    <p class="card-text"></p>
+  </div>
+  </div></div>
+
+  <div class="w-100"></div>
+
+  <div class="col"><div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+    <div class="card-header">AB positive</div>
+  <div class="card-body">
+    <h5 class="card-title"><span class='numscroller' data-min='1' data-max='{{b['6']}}' data-delay='5' data-increment='10'>{{b['6']}}</span> pints</h5>
+
+  </div>
+  </div></div>
+  <div class="col"><div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+    <div class="card-header">AB negative</div>
+  <div class="card-body">
+    <h5 class="card-title"><span class="count"><span class='numscroller' data-min='1' data-max='{{b['7']}}' data-delay='5' data-increment='10'>{{b['7']}}</span></span> pints</h5>
+
+  </div>
+  </div></div>
+  <div class="col"><div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">O positive</div>
+  <div class="card-body">
+    <h5 class="card-title"><span class="count"><span class='numscroller' data-min='1' data-max='{{b['8']}}' data-delay='5' data-increment='10'>{{b['8']}}</span> pints</h5>
+
+  </div>
+  </div></div>
+  <div class="col"><div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">O negtive</div>
+  <div class="card-body">
+    <h5 class="card-title"><span class="count"><span class='numscroller' data-min='1' data-max='{{b['9']}}' data-delay='5' data-increment='10'>{{b['9']}}</span> pints</h5>
+
+  </div>
+  </div></div>
+</div>
+</div>
+
+<div class="alert alert-primary" role="alert">
+  <h4>Plasma donatations and their details</h4>
+</div>
+
+
+         {% for row in rows %}
+           <div class="card">
+             <h5 class="card-header">{{row["donorname"]}}</h5>
+             <div class="card-body">
+               <h5 class="card-title">{{row["type"]}}</h5>
+               <p class="card-text">{{ row["donoremail"]}}
+               {{row['donorsex']}}
+               {{row['qty']}} pints
+               {{row['dweight']}}kg's
+               {{row['phone']}}</p>
+               <div class="row">
+    <div class="col">
+      <form action="{{url_for('editdonor',id=row['id'])}}" method="GET">
+      <input type="submit" class="btn btn-primary" name="button" value="edit"/>
+      </form>
+    </div>
+    <div class="col">
+      <form action="{{url_for('deletebloodentry',id=row['id'])}}" method="GET">
+      <input type="submit" name="button" class="btn btn-danger" value="delete entry"/>
+      </form>
+    </div>
+  </div>
+
+
+             </div>
+           </div>
+
+
+
+
+
+
+         {% endfor %}
+<br>
+         <nav aria-label="breadcrumb">
+           <ol class="breadcrumb">
+             <li class="breadcrumb-item active" aria-current="page">  Registered donores:</li>
+           </ol>
+         </nav>
+<br>
+
+
+
+        <table class="table">
+          <thead>
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col">address</th>
+      <th scope="col">city</th>
+      <th scope="col">pincode</th>
+      <th scope="col">blood group</th>
+      <th scope="col">email</th>
+      <th scope="col">contact them</th>
+      <th scope="col">delete</th>
+    </tr>
+
+  </thead>
+
+           {% for r in users %}
+              <tr>
+                 <td>{{r["NAME"]}}</td>
+                 <td>{{r["ADDRESS"]}}</td>
+                 <td> {{r["CITY"]}}</td>
+                 <td>{{r['PINCODE']}}</td>
+                 <td>{{r['BLOODGROUP']}}</td>
+                 <td>{{r['EMAIL']}}</td>
+              </tr>
+              {% endfor %}
+                  <td><button type="button" class="btn btn-primary mt-1" data-toggle="modal" data-target="#exampleModalCenter">
+                   contact for blood
+                        </button>
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">contact for blood</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="POST" action="{{url_for('contactforplasma')}}">
+            <label for="name">Name</label>
+            <input type = "text" name = "name" value="admin@plasmabank.com" class="form-control" required/>
+          <label for="address"> confirm your Address</label>
+         <input type="text" name="add" class="form-control" value="admin's address" required></textarea>
+         <button type="button" class="btn btn-secondary mt-1" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary mt-1">send request</button>
+        </div> 
+      
+                  <td><a href = "{{url_for('deleteuser',useremail=r['email'])}}" class="btn btn-danger">delete user</a></td>
+              </tr>
+
+
+
+
+
+
+
+
+
+
+
+           {% endblock %}
