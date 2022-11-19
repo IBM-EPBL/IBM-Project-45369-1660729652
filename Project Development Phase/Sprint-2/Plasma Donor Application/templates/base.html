@@ -1,0 +1,153 @@
+<html>
+    <head>
+        {% if title %}
+        <title> Plasma Donor Application</title>
+        {% else %}
+        <title>Welcome to plasma Donor </title>
+        {% endif %}
+        <link rel="shortcut icon" href="{{url_for('static', filename='plasma.png')}}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="{{url_for('static', filename='numscroller-1.0.js')}}"></script>
+<style>div.someclass {
+background-size: cover;
+}
+}</style>
+
+    </head>
+    <body>
+
+
+
+      {% if session['admin'] == True %}
+
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#33ccff;">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="navbar-brand" href="/"> Plasma Donor Application</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/plasmadonate">add donor</a>
+      </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('logout')}}">logout</a>
+        </li>
+        </ul>
+    </div>
+
+  </nav>
+
+      {% elif session['logged_in'] == True %}
+
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#33ccff;">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="navbar-brand" href="/"> Plasma Donor Application</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        
+       <li class="nav-item">
+        <a class="nav-link" href="{{url_for('registerdonor')}}">registerdonor</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('notifications')}}">notifications</a>
+      </li>
+      <li class="nav-brand">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+
+    <li class="nav-item">
+      <a class="nav-link" href="#"> Hi, {{ session['username']}}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{url_for('logout')}}">logout</a>
+    </li>
+    </ul>
+
+  </div>
+
+</nav>
+
+
+      {%else%}
+
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#33ccff;">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="navbar-brand" href="/"> Plasma Donor Application</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+      <li class="nav-brand">
+        <a class="nav-link" href="/login">login</a>
+      </li>
+      <li class="nav-brand">
+        <a class="nav-link" href="{{url_for('add')}}">register</a>
+      </li>
+      <li class="nav-brand">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+
+    </ul>
+  </div>
+
+</nav>
+
+
+
+    {%endif%}
+
+
+
+
+
+          {% block content %}
+
+           {% endblock %}
+
+      </body>
+
+
+<script type="text/javascript">
+    function send_notification_clicked(email)
+    {
+    var element = document.getElementById("contactform");
+    element.setAttribute("action",  '/contactforplasma/'+email);
+    }
+    </script>
+</html>
