@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container-fluid">
+<img style="width:100%" src="{{url_for('static', filename='pd.png')}}" class="card-body">
+</div>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "2de27163-e2ea-49e2-9c86-de9b90e62919", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "d239becd-5476-49ab-87de-48ad7ac31118", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+
+
+ {% endblock %}
