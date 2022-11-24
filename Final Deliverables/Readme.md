@@ -2,4 +2,4 @@
 </br>
 
 
-![home](./output/home.png)
+![home](./code/output/home.png)
