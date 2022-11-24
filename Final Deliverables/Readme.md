@@ -7,4 +7,4 @@
 ![login](./code/output/login.png)
 ![registerdonor](./code/output/registerdonor.png)
 ![adddonor](./code/output/donor.png)
-![dashboard](./code/output/dashboard.png)
+![dashboard](./code/output/dash.png)
