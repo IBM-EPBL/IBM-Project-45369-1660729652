@@ -3,3 +3,8 @@
 
 
 ![home](./code/output/home.png)
+![register](./code/output/register.png)
+![login](./code/output/login.png)
+![registerdonor](./code/output/registerdonor.png)
+![adddonor](./code/output/donor.png)
+![dashboard](./code/output/dashboard.png)
