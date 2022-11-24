@@ -2,9 +2,9 @@
 </br>
 
 
-![home](./code/output/home.png)
-![register](./code/output/register.png)
-![login](./code/output/login.png)
-![registerdonor](./code/output/registerdonor.png)
-![adddonor](./code/output/donor.png)
+![home](./code/output/home.png)</br>
+![register](./code/output/register.png)</br>
+![login](./code/output/login.png)</br>
+![registerdonor](./code/output/registerdonor.png)</br>
+![adddonor](./code/output/donor.png)</br>
 ![dashboard](./code/output/dash.png)
